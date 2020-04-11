@@ -1,0 +1,323 @@
+@CHARSET "UTF-8";
+@font-face
+{
+font-family: ZS;
+src: url(../font/TanXianWeiZhongSongJianTi-1.ttf);
+}
+@font-face
+{
+font-family: XS;
+src: url(../font/FangZhengXinShuSongJianTi-1.ttf);
+}
+
+
+*{
+    margin:0;
+    padding: 0;
+}
+html{
+	width:100%;
+	overflow-x:hidden;
+}
+body{
+	/* width:100%;
+	height:auto;
+	position:fixed; */
+	overflow:auto;
+    margin:0 auto;
+    -webkit-font-smoothing: antialiased;
+	overflow-x:hidden;
+}
+a:hover,a:focus{
+    text-decoration:none;
+    outline:none;
+    -moz-outline:none;
+}
+
+
+/* 头部导航 */
+.head{
+    margin: 0 auto;
+    width: 100%;
+    height: 320px;
+    position: relative;
+    /*box-shadow: 0px 1px 2px #888888;*/
+    background: url('../img/adastra2.jpg') no-repeat;
+    background-size:100% 102%;
+    background-position:absolute;
+}
+.head-cover{
+    margin: 0 auto;
+    width: 100%;
+    height: 320px;
+    z-index: 101;
+    position: absolute;
+    background: -webkit-linear-gradient(left top, rgba(101,163,227,0.5), rgba(101,202,180,0.5)); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(bottom right, rgba(101,163,227,0.5), rgba(101,202,180,0.5)); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(bottom right, rgba(101,163,227,0.5), rgba(101,202,180,0.5)); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to bottom right, rgba(101,163,227,0.5), rgba(101,202,180,0.5)); /* 标准的语法 */
+}
+.intro{
+    margin: 0 auto;
+    margin-top: 60px;
+    position: relative;
+    left:1%;
+    width:70%;
+    height:240px;
+    text-align: left;
+    color: white;
+    z-index: 102;
+}
+.intro small{
+    font-family:"Times New Roman",Times,serif;
+    font-size: 16px;
+	color:rgba(255,255,255,0.9);
+}
+.intro p{
+    display: block;
+    width: 30%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family:"Times New Roman",Times,serif;
+    font-size: 30px;
+    /* border-bottom: 1px solid #fff; */
+}
+
+/* Index */
+.main{
+    width:100%;
+    top: 340px;
+	bottom:0;
+    position: absolute;
+}
+.main .st-container{
+	width:400%;
+	height:auto;
+	position:absolute;
+	left:0;
+	top:-52px;
+	overflow:hidden;
+}
+.st-container>input,
+.st-container>a{
+	width:8.5%;
+	height:32px;
+	position:absolute;
+	top:0;
+	line-height:34px;
+	cursor:pointer;
+}
+
+.st-container>input{
+	margin:0;
+	opacity:0;
+	z-index:1000;
+}
+.st-container>a{
+	z-index:102;
+	line-height:26px;
+	font-size:24px;
+	font-family: ZS;
+	background:transparent;
+	text-align:center;
+	color:#fff;
+}
+
+#st-control-1,#st-control-1+a{
+	left:3.75%;
+}
+#st-control-2,#st-control-2+a{
+	left:12.25%;
+}
+
+.st-container input:checked+a{
+	border-bottom:4px solid rgba(255,255,255,1) !important;
+}
+.st-container input:hover+a{
+	border-bottom:4px solid rgba(255,255,255,0.5);
+}
+
+.st-scroll,.st-panel{
+	top:46px;
+	height:auto;
+	position:relative;
+}
+.st-panel{
+	width:17.5%;
+	margin-left:3.75%;
+	margin-right:3.75%;
+	float:left;
+	overflow:hidden;
+	font-family: ZS;
+}
+.st-scroll{
+	left:0;
+	top:0;
+	width:100%;
+	overflow:hidden;
+	-webkit-transform:translate3d(0,0,0);
+	-moz-transform:translate3d(0,0,0);
+	-o-transform:translate3d(0,0,0);
+	-ms-transform:translate3d(0,0,0);
+	transform:translate3d(0,0,0);
+	-webkit-backface-visibility:hidden;
+	-moz-transition:all 0.6s ease-in-out;
+	-o-transition:all 0.6s ease-in-out;
+	-ms-transition:all 0.6s ease-in-out;
+	transition:all 0.6s ease-in-out;
+}
+#st-control-1:checked~.st-scroll{
+	-webkit-transform:translateX(0%);
+	-moz-transform:translateX(0%);
+	-o-transform:translateX(0%);
+	-ms-transform:translateX(0%);
+	transform:translateX(0%);
+}
+#st-control-2:checked~.st-scroll{
+	-webkit-transform:translateX(-25%);
+	-moz-transform:translateX(-25%);
+	-o-transform:translateX(-25%);
+	-ms-transform:translateX(-25%);
+	transform:translateX(-25%);
+}
+/* #st-control-3:checked~.st-scroll{
+	-webkit-transform:translateX(-50%);
+	-moz-transform:translateX(-50%);
+	-o-transform:translateX(-50%);
+	-ms-transform:translateX(-50%);
+	transform:translateX(-50%);
+}
+#st-control-4:checked~.st-scroll{
+	-webkit-transform:translateX(-75%);
+	-moz-transform:translateX(-75%);
+	-o-transform:translateX(-75%);
+	-ms-transform:translateX(-75%);
+	transform:translateX(-75%); 
+}*/
+/* 活动页 */
+.article{
+    margin-top: 10px;
+    padding: 10px;
+}
+.article a{
+    color: #04141f;
+	-webkit-transition:0.2s ease-out;
+	-moz-transition:0.2s ease-out;
+	-o-transition:0.2s ease-out;
+	-ms-transition:0.2s ease-out;
+	transition:0.2s ease-out;
+}
+.article a:hover{
+    color: #406875;
+	/* -webkit-transform:scale(1.1);
+	-moz-transform:scale(1.1);
+	-o-transform:scale(1.1);
+	-ms-transform:scale(1.1);
+	transform:scale(1.1); */
+}
+.title{
+    font-size: 20px;
+}
+.title i{
+	margin-right:5px;
+}
+.brief{
+	border-left:2px solid rgba(0,0,0,0.7);
+	padding-left:14px;
+	padding-right:14px;
+	padding-top:5px;
+    margin-top: 5px;
+	margin-left: 7.5px;
+	margin-right: 7.5px;
+    color: #676767;
+	font-size:16px;
+}
+
+
+
+/* 底部 */
+.foot{
+    width: 70%;
+    margin: 40px auto 20px auto;
+    text-align: center;
+	position:absolute;
+	top:280px;
+	left:15%;
+	-webkit-backface-visibility:hidden;
+	-moz-transition:all 0.1s ease-in-out;
+	-o-transition:all 0.1s ease-in-out;
+	-ms-transition:all 0.1s ease-in-out;
+	transition:all 0.1s ease-in-out;
+}
+.links{
+    margin:0 auto;
+    width: 25%;
+    height: 50px;
+    position: relative;
+    overflow: hidden;
+}
+.links a{
+    display: inline-block;
+    float: left;
+    width: 25%;
+}
+.links > a > span{
+    display: inline-block;
+    width: 100%;
+}
+.links > a > span{
+    color: #437280;
+}
+.links > a > span:hover{
+    color: #56a4c0;
+}
+
+/* 自适应 */
+@media screen and (max-width:1200px){
+	.intro small{
+		font-size:20px;
+		width: 18%;
+	}
+	.title{
+    font-size: 18px;
+	}
+	.brief{
+		font-size:12px;
+	}
+	.links{
+		width:30%;
+	}
+}
+@media screen and (max-width:800px){
+	.head{
+		background-size:cover;
+	}
+	.intro small{
+		font-size:16px;
+		width: 20%;
+	}
+	.article{
+		margin-top: 12px;
+	}
+	.title{
+    font-size: 16px;
+	}
+	.brief{
+		font-size:10px;
+	}
+	.article-title{
+		font-size:22px;
+	}
+	.content p{
+		font-size:10px;
+	}
+	.work-wrap .time{
+		font-size:10px;
+	}
+	.work-wrap .description{
+		font-size:10px;
+	}
+	.links{
+		width:45%;
+	}
+}
