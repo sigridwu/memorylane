@@ -12,6 +12,7 @@
 <body>
 <div class="head">
     <div class="head-cover">
+		<button type="button" class="btn" data-toggle="modal"  data-target="#loginModal">登录</button>
         <div class="intro">
 			<small>Sigrid and Shawn's</small>
             <p>Memory Lane</p>
@@ -19,15 +20,94 @@
     </div>
 </div>
 
-
+<!-- 模态框（Modal） -->
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+					&times;
+				</button>
+				<h4 class="modal-title" id="myModalLabel">
+					验证身份以开启记忆小径
+				</h4>
+			</div>
+			<div class="modal-body">
+				<form class="form-horizontal" role="form">
+					<div class="form-group">
+						<label for="userid" class="col-sm-4 control-label">ID</label>
+						<div class="col-sm-5">
+							<input type="text" class="form-control" id="userid">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="nkname" class="col-sm-4 control-label">昵称</label>
+						<div class="col-sm-5">
+							<input type="text" class="form-control" id="username">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="name" class="col-sm-4 control-label">喜爱的饮品</label>
+						<div>
+							<label class="radio-inline">
+								<input type="radio" name="drink" value="1"> 小芋圆奶茶
+							</label>
+							<label class="radio-inline">
+								<input type="radio" name="drink" value="2"> 怡泉苏打水
+							</label>
+							<label class="radio-inline">
+								<input type="radio" name="drink" value="3"> 多肉葡萄
+							</label>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="name" class="col-sm-4 control-label">喜爱的甜点</label>
+						<div>
+							<label class="radio-inline">
+								<input type="radio" name="dessert" value="1"> 芋圆4号
+							</label>
+							<label class="radio-inline">
+								<input type="radio" name="dessert" value="2"> 赛百味甜饼
+							</label>
+							<label class="radio-inline">
+								<input type="radio" name="dessert" value="3"> 点式司康
+							</label>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="name" class="col-sm-4 control-label">小猫的名字</label>
+						<div>
+							<label class="radio-inline">
+								<input type="radio" name="cat" value="1"> 布尔加科夫
+							</label>
+							<label class="radio-inline">
+								<input type="radio" name="cat" value="2"> 陀思妥耶夫斯基
+							</label>
+							<label class="radio-inline">
+								<input type="radio" name="cat" value="3"> 巴浦洛夫
+							</label>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">关闭
+				</button>
+				<button id="login-btn" type="button" class="btn btn-primary">
+					登录
+				</button>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal -->
+</div>
 
 <div class="main">
 	<div class="st-container">
 		<!--nav begin-->
 		<input type="radio" name="radio-set" checked="checked"  id="st-control-1" data-page="1">
-		<a href="#st-panel-1">记 忆</a>
+		<a href="#st-panel-1">Sigrid 的记忆</a>
 		<input type="radio" name="radio-set"  id="st-control-2" data-page="2">
-		<a href="#st-panel-2">节 点</a>
+		<a href="#st-panel-2">Shawn 的记忆</a>
 		<!--nav end-->
 		<div class="st-scroll" id="accordion">
 			<section class="st-panel" id="st-panel-1">
@@ -38,8 +118,8 @@
 						</a>
 					</div>
 					<div id="jy1" class="brief collapse">
-						<i class="fa fa-clock-o"></i> 2019年7月22日，我们相遇了，相互打了招呼。
-						<br><i class="fa fa-clock-o"></i> 2019年7月24日，有一些好奇，通过，我们开始向对方分享各自喜欢的歌。
+						<i class="fa fa-clock-o"></i> 2019年7月22日，我们相遇啦，相互打了声招呼，却没有进一步的交流。
+						<br><i class="fa fa-clock-o"></i> 2019年7月24日，看着你的照片，对你有一些好奇，看到你喜欢的歌手中有Eric Clapton，正好最近常听《old love》和《layla》觉得很喜欢，于是就此和你聊了起来，通过这个话题，我们开始向对方分享各自喜欢的歌曲。
 					</div>
 				</div>
 				<div class="article">
@@ -49,9 +129,10 @@
 						</a>
 					</div>
 					<div id="jy2" class="brief collapse">
-						<i class="fa fa-clock-o"></i> 2019年7月26日，你向我分享你看到流星的经历。7月29日，我向你分享当天傍晚的彩虹。因为这两个美好又转瞬即逝的景象，我们因此进一步了解。
-						<br><i class="fa fa-clock-o"></i> 2019年8月3日，你的心情看起来不太好，但作为一个刚认识不久的陌生人，我不知道怎么样能让你感觉好一些，于是向你分享了我心情低落时会做的事情。你说被一种孤独感侵袭了，虽然不清楚让你产生这种情感的具体情境，但。我想，你应该也是一个有那么一些敏感特质的人吧，并且寻求着，从这一点上来说我们倒是很相似。那天晚上我们聊了很久，一直聊到凌晨2点半，这也是我们第一次敞开心扉的交谈。
-						<br><i class="fa fa-clock-o"></i> 2019年8月17日，
+						<i class="fa fa-clock-o"></i> 2019年7月26日，你向我分享你看到流星的经历。7月29日，我向你分享当天傍晚的彩虹。因为这两个美好又转瞬即逝的景象，我们因此有了进一步的了解。
+						<br><img src="img/rainbow.jpg" style="padding:10px;margin-left:10px;">
+						<br><i class="fa fa-clock-o"></i> 2019年8月3日，你的心情似乎不太好，你说自己被一种孤独感侵袭了，但作为一个刚认识不久的陌生人，我不知道怎么样能让你感觉好一些，于是向你分享了我心情低落时会做的事情。虽然不清楚是什么让你产生了这种情感，但类似的心情我却能够体会和感受得到。我想，你应该也是一个有那么一些敏感特质的人吧，并且寻求着倾诉与理解，从这一点上来说我们确实很相似。那天晚上我们聊了很久，一直聊到凌晨2点半，这也是我们第一次敞开心扉的交谈。
+						<br><i class="fa fa-clock-o"></i> 2019年8月17日，你向我推荐了克莱普顿的自传《天堂十字路口》，8月27日，你问我要不要把克莱普顿的自传带回来借给我看，我知道这意味着我们可能要见面了，从那时起我就开始期待了。
 					</div>
 				</div>
 				<div class="article">
@@ -64,29 +145,35 @@
 						<i class="fa fa-clock-o"></i> 2019年9月6日，在一阵闲聊后，你提出要把克莱普顿的自传带给我，这其实是这一个多月以来我一直期盼的时刻呀，和你见面，但是
 					</div>
 				</div>
+				<div class="article">
+					<div class="title">
+						<a data-toggle="collapse" data-parent="#accordion" href="#jy3">
+							<i class="fa fa-circle-o"></i>相恋
+						</a>
+					</div>
+					<div id="jy3" class="brief collapse">
+						<i class="fa fa-clock-o"></i> 
+					</div>
+				</div>
 				<br><br><br>
 			</section>
 			<section class="st-panel" id="st-panel-2">
-				<div class="article">
-					<div class="title" style="margin-top:20px">
-						<a data-toggle="collapse" data-parent="#accordion" href="#">
-							<i class="fa fa-circle-o"></i>简单的可折叠组件
-						</a>
-					</div>
-					<div id="demo" class="brief collapse">
-						Nihil anim keffiyeh helvetica, craft beer labore wes anderson 
-						cred nesciunt sapiente ea proident. Ad vegan excepteur butcher 
-						vice lomo.
-					</div>
+				<div id="load-mmry">
 				</div>
-				<div class="article">
-					<div class="title"><a></a></div>
-				</div>
+				<form role="form" id="add-mmry">
+					<div class="form-group">
+						<label for="name">请在这里输入你想记录的记忆</label>
+						<textarea class="form-control" rows="3"></textarea>
+					</div>
+					<button id="add-btn" type="submit" class="btn btn-default">更新记忆</button>
+				</form>
+
 			</section>
 		</div>
 	</div>
 </div>
 
+<div id="mask"></div>
 <!--底部-->
 
 <div class="foot">
@@ -94,6 +181,6 @@
 </div>
 <script type="text/javascript" src="js/jquery-1.12.1.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="script.js"></script>
 </body>
 </html>

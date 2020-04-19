@@ -33,6 +33,9 @@ a:hover,a:focus{
     outline:none;
     -moz-outline:none;
 }
+i{
+	padding-top:6px;
+}
 
 
 /* 头部导航 */
@@ -56,6 +59,18 @@ a:hover,a:focus{
     background: -o-linear-gradient(bottom right, rgba(101,163,227,0.5), rgba(101,202,180,0.5)); /* Opera 11.1 - 12.0 */
     background: -moz-linear-gradient(bottom right, rgba(101,163,227,0.5), rgba(101,202,180,0.5)); /* Firefox 3.6 - 15 */
     background: linear-gradient(to bottom right, rgba(101,163,227,0.5), rgba(101,202,180,0.5)); /* 标准的语法 */
+}
+.head-cover>.btn{
+	position: absolute;
+    right: 17.5%;
+	top:2px;
+	background:rgb(255,255,255,0);
+	border: 1px solid rgba(255,255,255,0.5);
+	color:rgba(255,255,255,0.5);
+}
+.head-cover>.btn:hover{
+	border: 1px solid rgba(255,255,255,0.9);
+	color:rgba(255,255,255,0.9);
 }
 .intro{
     margin: 0 auto;
@@ -116,7 +131,7 @@ a:hover,a:focus{
 .st-container>a{
 	z-index:102;
 	line-height:26px;
-	font-size:24px;
+	font-size:23px;
 	font-family: ZS;
 	background:transparent;
 	text-align:center;
@@ -226,6 +241,7 @@ a:hover,a:focus{
 	padding-left:14px;
 	padding-right:14px;
 	padding-top:5px;
+	padding-bottom:8px;
     margin-top: 5px;
 	margin-left: 7.5px;
 	margin-right: 7.5px;
@@ -233,6 +249,32 @@ a:hover,a:focus{
 	font-size:16px;
 }
 
+/*st-panel-2*/
+#load-mmry{
+    margin-top: 10px;
+    padding: 10px;
+}
+
+#st-panel-2 form{
+	margin:10px;
+	margin-right:5%;
+	top:20px;
+}
+#st-panel-2 form>button{
+	
+}
+
+/*遮罩*/
+#mask{
+	z-index:900;
+	position:fixed!important; 
+	position:absolute; 
+	left:0px;
+	top:46px; 
+	width:100%; 
+	height:100%;  
+	background:transparent; 
+}
 
 
 /* 底部 */
