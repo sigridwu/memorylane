@@ -37,7 +37,7 @@ $("#add-btn").click(function(){
 	var bef = "<div class='brief'><i class='fa fa-clock-o'></i>";
 	var aft = "</div>"
 	var mmry = $("#mmry-data").val();
-	var mmrydata = bef + mmry +aft;
+	var mmrydata = oldmmry + bef + mmry +aft;
 	/* 替换文件解决方案 - 自动下载新txt文件*/
 	var file = new File([mmrydata],"mmry.txt",{ type: "text/plain;charset=utf-8" });
 	saveAs(file);
