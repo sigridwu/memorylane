@@ -34,7 +34,7 @@ a:hover,a:focus{
     -moz-outline:none;
 }
 i{
-	padding-top:6px;
+	padding-top:8px;
 }
 
 
@@ -238,16 +238,18 @@ i{
 }
 .brief{
 	border-left:2px solid rgba(0,0,0,0.7);
-	padding-left:14px;
+	padding-left:18px;
 	padding-right:14px;
 	padding-top:5px;
 	padding-bottom:8px;
     margin-top: 5px;
 	margin-left: 7.5px;
 	margin-right: 7.5px;
-    color: #676767;
+    color: #1c2b39;
 	font-size:16px;
+	line-height:28px;
 }
+
 
 /*st-panel-2*/
 #load-mmry{
@@ -338,7 +340,7 @@ i{
 		font-size:16px;
 		width: 20%;
 	}
-	.article{
+/* 	.article{
 		margin-top: 12px;
 	}
 	.title{
@@ -358,7 +360,7 @@ i{
 	}
 	.work-wrap .description{
 		font-size:10px;
-	}
+	} */
 	.links{
 		width:45%;
 	}

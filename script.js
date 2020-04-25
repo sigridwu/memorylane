@@ -2,10 +2,8 @@
  * Created by hp on 2016/7/10.
  */
 $(document).ready(function(){
-    var w=document.documentElement.clientWidth;
-    var imgwidth = (w*0.63-22)+"px";
-    $(".work-img").css("width",imgwidth);
 	$("#add-mmry").hide();
+	//$("#mask").remove();
 });
 
 
@@ -35,5 +33,15 @@ $("#login-btn").click(function(){
 
 //添加记忆
 $("#add-btn").click(function(){
+	var mmrydata = $("#mmry-data").val();
+	/* 替换文件解决方案 - 自动下载新txt文件*/
+	var file = new File([mmrydata],"mmry.txt",{ type: "text/plain;charset=utf-8" });
+	saveAs(file);
 	
+	/* var xmlhttp;
+	xmlhttp=new XMLHttpRequest();
+	
+	$.post("data/mmry.txt",mmrydata,function(){
+		alert("更新成功");
+	}); */
 });
