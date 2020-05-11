@@ -36,8 +36,8 @@ $("#login-btn").click(function(){
 //添加记忆
 $("#add-btn").click(function(){
 	var oldmmry = $("#load-mmry").html();
-	var bef = "<div class='brief'><i class='fa fa-clock-o'></i>";
-	var aft = "</div>"
+	var bef = '<div class="brief"><i class="fa fa-clock-o"></i>';
+	var aft = "</div>";
 	var mmry = $("#mmry-data").val();
 	var mmrydata = oldmmry + bef + mmry +aft;
 	/* 替换文件解决方案 - 自动下载新txt文件*/
