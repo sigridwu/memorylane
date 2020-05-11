@@ -1,7 +1,7 @@
-<div class="brief">
+﻿<div class="brief">
 	<i class="fa fa-clock-o"></i> 2020年4月25日，Shawn的记忆从这里开始。
 </div>
-
-<div class='brief'><i class='fa fa-clock-o'></i>你好</div>
-
-<div class='brief'><i class='fa fa-clock-o'></i></div>
+<<<<<<< HEAD
+<div class="brief"><i class="fa fa-clock-o"></i>你好</div>
+=======
+>>>>>>> 32edca71bd6303e94e46bfb2955124a889c0d28f
