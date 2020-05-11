@@ -2,3 +2,6 @@
 	<i class="fa fa-clock-o"></i> 2020年4月25日，Shawn的记忆从这里开始。
 </div>
 
+<div class='brief'><i class='fa fa-clock-o'></i>你好</div>
+
+<div class='brief'><i class='fa fa-clock-o'></i></div>
