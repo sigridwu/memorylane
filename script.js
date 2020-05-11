@@ -2,6 +2,8 @@
  * Created by hp on 2016/7/10.
  */
 $(document).ready(function(){
+	$("#load-mmry").load("data/mmry.txt");
+	$("#load-mmry").hide();
 	$("#add-mmry").hide();
 	//$("#mask").remove();
 });
@@ -23,7 +25,7 @@ $("#login-btn").click(function(){
 		alert("Shawn，欢迎来到记忆小径！");
 		$('#loginModal').modal('hide');
 		$("#mask").remove();
-		$("#load-mmry").load("data/mmry.txt");
+		$("#load-mmry").show();
 		$("#add-mmry").show();
 	}
 	else{
@@ -33,7 +35,7 @@ $("#login-btn").click(function(){
 
 //添加记忆
 $("#add-btn").click(function(){
-	var oldmmry = $("#load-mmry").load("data/mmry.txt");
+	var oldmmry = $("#load-mmry").html();
 	var bef = "<div class='brief'><i class='fa fa-clock-o'></i>";
 	var aft = "</div>"
 	var mmry = $("#mmry-data").val();
